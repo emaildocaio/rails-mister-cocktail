@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="container mt-5 col-9">
+    <h1>Cocktails#:show</h1>
+    <p>Find me in app/views/cocktails/:show.html.erb</p>
+
+    <h2><%= @cocktail.name %></h2>
+
+    <%= link_to 'Edit', edit_cocktail_path(@cocktail), class: "btn btn-primary" %>
+    <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
+    <%= link_to "Delete #{@cocktail.name}",
+                cocktail_path(@cocktail),
+                method: :delete,
+                data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  </div>
+</div>
